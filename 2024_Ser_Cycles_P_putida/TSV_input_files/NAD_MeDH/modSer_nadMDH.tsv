@@ -1,0 +1,101 @@
+!!!SBtab DocumentName='THETA' SBtabVersion='1.0'			
+!!SBtab TableID='Configuration' TableType='Config'
+!Option	!Value	!Comment	
+algorithm	MDF	ECM, or MDF	
+p_h	7.8
+ionic_strength	250 mM
+temperature	298.15K
+p_mg	3
+dg_confidence	0.95	default, [0,1)
+			
+!!SBtab TableID='Reaction' TableType='Reaction'
+!ID	!ReactionFormula
+MEDH	meoh + nad = faldh + nadh
+FALDH	faldh + h2o + nad = for + nadh
+FTL	for + thf + atp = 10fthf + adp + pi
+MTHFC	10fthf = methf + h2o
+MTHFD	methf + nadph = mlthf + nadp
+SHMT	mlthf + gly__L + h2o = ser__L + thf
+SDH	ser__L = pyr + nh3
+PYC	pyr + co2 + atp = oaa + adp + pi
+MaDH	nadh + oaa = nad + mal__D
+MTK	atp + coa + mal__D = adp + pi + malcoa
+MCL	malcoa = accoa + glx
+AGT	glx + glu__L = gly__L + akg
+			
+!!SBtab TableID='Compound' TableType='Compound'			
+!ID	!Identifiers
+meoh	kegg:C00132
+faldh	kegg:C00067
+nadp	kegg:C00006
+ser__L	kegg:C00065
+nadph	kegg:C00005
+gly__L	kegg:C00037
+oaa	kegg:C00036
+atp	kegg:C00002
+methf	kegg:C00445
+nadh	kegg:C00004
+coa	kegg:C00010
+thf	kegg:C00101
+nad	kegg:C00003
+mal__D	kegg:C00149
+malcoa	kegg:C04348
+accoa	kegg:C00024
+pi	kegg:C00009
+glx	kegg:C00048
+for	kegg:C00058
+adp	kegg:C00008
+co2	kegg:C00011
+mlthf	kegg:C00143
+h2o	kegg:C00001
+10fthf	kegg:C00234
+nh3	kegg:C00014
+pyr	kegg:C00022
+akg	kegg:C00026
+glu__L	kegg:C00025
+			
+!!SBtab TableID='Flux' TableType='Quantity' Unit='mM/s'			
+!QuantityType	!Reaction	!Value	
+rate of reaction	MEDH	1
+rate of reaction	FALDH	1
+rate of reaction	FTL	1
+rate of reaction	MTHFC	1
+rate of reaction	MTHFD	1
+rate of reaction	SHMT	1
+rate of reaction	SDH	1
+rate of reaction	PYC	1
+rate of reaction	MaDH	1
+rate of reaction	MTK	1
+rate of reaction	MCL	1
+rate of reaction	AGT	1
+			
+!!SBtab TableID='ConcentrationConstraint' TableType='Quantity' Unit='M'			
+!QuantityType	!Compound	!Min	!Max
+concentration	meoh	1E-06	0.01
+concentration	faldh	1E-06	0.001
+concentration	nadp	1E-05	1E-05
+concentration	ser__L	1E-06	0.01
+concentration	nadph	0.0001	0.0001
+concentration	gly__L	1E-06	0.01
+concentration	oaa	1E-06	0.01
+concentration	atp	0.005	0.005
+concentration	methf	1E-06	0.01
+concentration	nadh	0.0001	0.0001
+concentration	coa	0.001	0.001
+concentration	thf	1E-06	0.01
+concentration	nad	0.001	0.001
+concentration	mal__D	1E-06	0.01
+concentration	malcoa	1E-06	0.01
+concentration	accoa	1E-06	0.01
+concentration	pi	0.01	0.01
+concentration	glx	1E-06	0.01
+concentration	for	1E-06	0.01
+concentration	adp	0.0005	0.0005
+concentration	co2	1E-05	1E-05
+concentration	mlthf	1E-06	0.01
+concentration	h2o	1.0	1.0
+concentration	10fthf	1E-06	0.01
+concentration	nh3	0.01	0.01
+concentration	pyr	1E-06	0.01
+concentration	akg	0.0005	0.0005
+concentration	glu__L	0.1	0.1
