@@ -1,7 +1,7 @@
 ## *P. putida* genome-scale metabolic models
 
 - The main model: *i*JN1463 ( [Nogales *et al.* (2020)](https://doi.org/10.1111/1462-2920.14843)
-- Curated iJN1463 used in [Puiggene et al. (2024)]
+    - Curated *i*JN1463 used in [Puiggene et al. (2024)]
 
 ## Errors/inaccuracy in the model *i*JN1463:
 
