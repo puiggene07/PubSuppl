@@ -1,0 +1,121 @@
+!!!SBtab DocumentName='THETA' SBtabVersion='1.0'			
+!!SBtab TableID='Configuration' TableType='Config'
+!Option	!Value	!Comment	
+algorithm	MDF	ECM, or MDF	
+p_h	7.8
+ionic_strength	250 mM
+temperature	298.15K
+p_mg	3
+dg_confidence	0.95	default, [0,1)
+			
+!!SBtab TableID='Reaction' TableType='Reaction'
+!ID	!ReactionFormula
+FALDH	faldh + h2o + nad = for + nadh
+FTL	for + thf + atp = 10fthf + adp + pi
+MTHFC	10fthf = methf + h2o
+MTHFD	methf + nadph = mlthf + nadp
+SHMT	mlthf + gly__L + h2o = ser__L + thf
+SDH	ser__L = pyr + nh3
+PYC	pyr + co2 + atp = oaa + adp + pi
+ASPTA	oaa + glu__L = asp__L + akg
+ASPK	asp__L + atp = adp + 4pasp
+ASADH	4pasp + nadph = nadp + aspsa + pi
+HSDy	aspsa + nadph = hom__L + nadp
+HSK	hom__L + atp = phom + adp
+TS	phom + h2o = thr__L + pi
+LTA	thr__L = acaldh + gly__L
+ALDH	acaldh + nad + h2o = ac + nadh
+ACS	ac + atp + CoA = accoa + amp + ppi
+			
+!!SBtab TableID='Compound' TableType='Compound'			
+!ID	!Identifiers
+h2o	kegg:C00001
+ser__L	kegg:C00065
+thr__L	kegg:C00188
+gly__L	kegg:C00037
+CoA	kegg:C00010
+pi	kegg:C00009
+nh3	kegg:C00014
+phom	kegg:C01102
+faldh	kegg:C00067
+glu__L	kegg:C00025
+acaldh	kegg:C00084
+nadh	kegg:C00004
+akg	kegg:C00026
+adp	kegg:C00008
+accoa	kegg:C00024
+hom__L	kegg:C00263
+nad	kegg:C00003
+pyr	kegg:C00022
+atp	kegg:C00002
+ac	kegg:C00033
+amp	kegg:C00020
+ppi	kegg:C00013
+methf	kegg:C00445
+thf	kegg:C00101
+for	kegg:C00058
+co2	kegg:C00011
+mlthf	kegg:C00143
+10fthf	kegg:C00234
+asp__L	kegg:C00049
+oaa	kegg:C00036	
+4pasp	kegg:C03082
+aspsa	kegg:C00441
+nadp	kegg:C00006
+nadph	kegg:C00005
+			
+!!SBtab TableID='Flux' TableType='Quantity' Unit='mM/s'			
+!QuantityType	!Reaction	!Value	
+rate of reaction	FALDH	1
+rate of reaction	FTL	1
+rate of reaction	MTHFC	1
+rate of reaction	MTHFD	1
+rate of reaction	SHMT	1
+rate of reaction	SDH	1
+rate of reaction	PYC	1
+rate of reaction	ASPTA	1
+rate of reaction	ASPK	1
+rate of reaction	ASADH	1
+rate of reaction	HSDy	1
+rate of reaction	HSK	1
+rate of reaction	TS	1
+rate of reaction	LTA	1
+rate of reaction	ALDH	1
+rate of reaction	ACS	1
+			
+!!SBtab TableID='ConcentrationConstraint' TableType='Quantity' Unit='M'			
+!QuantityType	!Compound	!Min	!Max
+concentration	h2o	1.0	1.0
+concentration	ser__L	1E-06	0.01
+concentration	thr__L	1E-06	0.01
+concentration	gly__L	1E-06	0.01
+concentration	CoA	0.001	0.001
+concentration	pi	0.01	0.01
+concentration	nh3	0.01	0.01
+concentration	phom	1E-06	0.01
+concentration	faldh	1E-06	0.001
+concentration	glu__L	0.1	0.1
+concentration	acaldh	1E-06	0.01
+concentration	nadh	0.0001	0.0001
+concentration	akg	0.0005	0.0005
+concentration	adp	0.0005	0.0005
+concentration	accoa	1E-06	0.01
+concentration	hom__L	1E-06	0.01
+concentration	nad	0.001	0.001
+concentration	pyr	1E-06	0.01
+concentration	atp	0.005	0.005
+concentration	ac	1E-06	0.01
+concentration	amp	0.0005	0.0005
+concentration	ppi	0.01	0.01
+concentration	methf	1E-06	0.01
+concentration	thf	1E-06	0.01
+concentration	for	1E-06	0.01
+concentration	co2	1E-05	1E-05
+concentration	mlthf	1E-06	0.01
+concentration	10fthf	1E-06	0.01
+concentration	asp__L	1E-06	0.01
+concentration	oaa	1E-06	0.01
+concentration	4pasp	1E-06	0.01
+concentration	aspsa	1E-06	0.01
+concentration	nadp	1E-05	1E-05
+concentration	nadph	0.0001	0.0001
