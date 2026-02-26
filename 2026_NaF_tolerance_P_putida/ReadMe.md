@@ -19,7 +19,7 @@
 - Genes with total normalized counts < 10 are removed.
 - Multiple testing correction: Benjamini–Hochberg FDR.
 - PCA uses rlog transformation.
-- Dependencies are listed in the attached code.
+- Dependencies are listed in the attached [code](2026_NaF_tolerance_P_putida/DESEQ-RNAseq_F_transp_collab_GitHub.R).
 
 ### Pipeline overview
 
